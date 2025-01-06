@@ -1,0 +1,11 @@
+{
+  "farms": [
+    {
+      "id": 1,
+      "name": "8 O'Clock Ranch",
+      "url": "https://8oclockranch.com/",
+      "description": "Local farm offering sustainably raised meats",
+      "location": "Upstate New York"
+    }
+  ]
+} 

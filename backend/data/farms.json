@@ -1,0 +1,25 @@
+{
+  "farms": [
+    {
+      "id": 1,
+      "name": "8 O'Clock Ranch",
+      "url": "https://8oclockranch.com/",
+      "description": "Local farm offering sustainably raised meats",
+      "location": "Upstate New York"
+    },
+    {
+      "id": 2,
+      "name": "Amazing Creator Farm",
+      "url": "https://amazingcreator.com/",
+      "description": "Family-owned farm with organic produce",
+      "location": "California"
+    },
+    {
+      "id": 3,
+      "name": "Autumn Harvest Farm",
+      "url": "https://autumnsharvestfarmpasturedmeats.com/.",
+      "description": "Family-owned farm with organic produce",
+      "location": "California"
+    }
+  ]
+} 
