@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Manifesto from './components/Manifesto';
 import Farms from './components/Farms';
+import About from './components/About';
 
 const Container = styled.div`
   margin-top: 100vh;
@@ -131,8 +132,9 @@ function MainContent() {
         <HeroButton as={Link} to="/farms">Find Local Farms</HeroButton>
         <HeroButton primary onClick={scrollToManifesto}>Learn More ↓</HeroButton>
       </HeroButtonContainer>
-      <Container id="manifesto">
+      <Container id="body">
         <Manifesto />
+        <About />
       </Container>
     </>
   );
@@ -145,6 +147,7 @@ function App() {
         <Route path="/" element={<MainContent />} />
         <Route path="/manifesto" element={<Manifesto />} />
         <Route path="/farms" element={<Farms />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );
