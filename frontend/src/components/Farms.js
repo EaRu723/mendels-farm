@@ -2,17 +2,23 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
 const FarmsContainer = styled.div`
-  padding: 4rem;
-  background-color: white;
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
+  padding: 4rem 2rem;
+  font-family: 'Quicksand', sans-serif;
 `;
 
-const Title = styled.h2`
-  font-size: 2.5rem;
+const WideContainer = styled.div`
+  max-width: 80%;
+  margin: 0 auto;
+`;
+
+const Title = styled.h1`
+  font-size: 3.5rem;
+  color: #2C3E50;
   margin-bottom: 2rem;
-  font-weight: bold;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
 `;
 
 const SearchSection = styled.section`
@@ -57,6 +63,22 @@ const FarmFrame = styled.iframe`
   }
 `;
 
+const LoadingText = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495E;
+  text-align: center;
+  margin: 2rem 0;
+`;
+
+const ErrorText = styled.p`
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #E74C3C;
+  text-align: center;
+  margin: 2rem 0;
+`;
+
 function Farms() {
   const [farms, setFarms] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -81,8 +103,8 @@ function Farms() {
     fetchFarms();
   }, []);
 
-  if (loading) return <div>Loading farms...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <FarmsContainer><LoadingText>Loading farms...</LoadingText></FarmsContainer>;
+  if (error) return <FarmsContainer><ErrorText>Error: {error}</ErrorText></FarmsContainer>;
 
   return (
     <FarmsContainer>
@@ -95,16 +117,18 @@ function Farms() {
         />
       </SearchSection>
 
-      <FarmsGrid>
-        {farms.map((farm) => (
-          <FarmFrame
-            key={farm.id}
-            title={farm.name}
-            src={farm.url}
-            sandbox="allow-same-origin allow-scripts"
-          />
-        ))}
-      </FarmsGrid>
+      <WideContainer>
+        <FarmsGrid>
+          {farms.map((farm) => (
+            <FarmFrame
+              key={farm.id}
+              title={farm.name}
+              src={farm.url}
+              sandbox="allow-same-origin allow-scripts"
+            />
+          ))}
+        </FarmsGrid>
+      </WideContainer>
     </FarmsContainer>
   );
 }
