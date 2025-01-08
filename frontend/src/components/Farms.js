@@ -65,7 +65,7 @@ function Farms() {
   useEffect(() => {
     const fetchFarms = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/farms');
+        const response = await fetch('http://localhost:8080/api/farms');
         if (!response.ok) {
           throw new Error('Failed to fetch farms');
         }
