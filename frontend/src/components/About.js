@@ -1,30 +1,31 @@
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
-  padding: 4rem;
-  background-color: white;
   max-width: 800px;
   margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: 'Quicksand', sans-serif;
+`;
+
+const Title = styled.h1`
+  font-size: 3.5rem;
+  color: #2C3E50;
+  margin-bottom: 2rem;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
 `;
 
-const AboutTitle = styled.h2`
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-`;
-
 const AboutText = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495E;
   margin-bottom: 1.5rem;
-  text-align: left;
 `;
 
 function About() {
   return (
     <AboutContainer>
-      <AboutTitle>About Us</AboutTitle>
+      <Title>About Us</Title>
       <AboutText>
         👋 Hi, I'm Andrea. I'm fascinated by the intersection of biology and technology so I studied Biomedical Engineering. Somewhere along the way, I realized that our lives have become needlessly complicated.
         <br />
@@ -39,7 +40,7 @@ function About() {
         <br />
         <br />
         That's why I created Mendel's Farm - to help people heal themselves through real food while supporting the local farmers who make it possible.
-        </AboutText>
+      </AboutText>
     </AboutContainer>
   );
 }

@@ -2,18 +2,17 @@ import styled from 'styled-components';
 import { useState, useEffect } from 'react';
 
 const FarmsContainer = styled.div`
-  max-width: 1200px;
+  padding: 4rem;
+  background-color: white;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 2rem;
-  font-family: 'Quicksand', sans-serif;
+  text-align: center;
 `;
 
-const Title = styled.h1`
-  font-size: 3.5rem;
-  color: #2C3E50;
+const Title = styled.h2`
+  font-size: 2.5rem;
   margin-bottom: 2rem;
-  font-family: 'Amatic SC', cursive;
-  text-align: center;
+  font-weight: bold;
 `;
 
 const SearchSection = styled.section`
@@ -42,6 +41,7 @@ const FarmsGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
+  text-align: left;
 `;
 
 const FarmFrame = styled.iframe`
