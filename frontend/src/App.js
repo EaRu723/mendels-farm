@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Manifesto from './components/Manifesto';
 import Farms from './components/Farms';
 import About from './components/About';
+import Intro from './components/Intro';
 
 const Container = styled.div`
   margin-top: 100vh;
@@ -12,6 +13,9 @@ const Container = styled.div`
   background-color: rgba(255, 255, 255, 1.0);
   border-radius: 20px 20px 0 0;
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 `;
 
 const HeaderImage = styled.div`
@@ -133,8 +137,9 @@ function MainContent() {
         <HeroButton primary onClick={scrollToManifesto}>Learn More ↓</HeroButton>
       </HeroButtonContainer>
       <Container id="body">
-        <Manifesto />
+        <Intro />
         <About />
+        <Manifesto />
       </Container>
     </>
   );

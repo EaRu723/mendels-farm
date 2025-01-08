@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+const StyledLink = styled.a`
+  color: #27AE60;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const ManifestoContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
@@ -44,6 +53,9 @@ const ListItem = styled.li`
   margin: 0.8rem 0;
   padding-left: 1.5rem;
   position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495E;
   
   &:before {
     content: "•";
@@ -53,136 +65,80 @@ const ListItem = styled.li`
   }
 `;
 
-const Quote = styled.blockquote`
-  font-style: italic;
-  color: #7F8C8D;
-  border-left: 4px solid #27AE60;
-  padding-left: 1rem;
-  margin: 2rem 0;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 4rem 0 2rem 0;
-`;
-
-const ActionButton = styled(Link)`
-  font-family: 'Quicksand', sans-serif;
-  padding: 1.2rem 3rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  background-color: #27AE60;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.2s, background-color 0.2s;
-  
-  &:hover {
-    transform: translateY(-2px);
-    background-color: #219a52;
-  }
-`;
-
-const SubSection = styled.div`
-  margin: 2rem 0 2rem 2rem;
-`;
-
-const SubSectionTitle = styled.h3`
-  font-size: 1.5rem;
-  color: #2C3E50;
-  margin-bottom: 1rem;
-  font-weight: 600;
-`;
-
 function Manifesto() {
   return (
     <ManifestoContainer>
-      <Title>The Mendel's Farm Manifesto</Title>
+      <Title>Manifesto</Title>
       
       <Section>
-        <SectionTitle>Our Vision</SectionTitle>
+        <SectionTitle>Why Local Farms Matter</SectionTitle>
         <Paragraph>
-          We believe in a future where food is more than just sustenance—it's a connection to our land, our health, and our communities. The industrialization of agriculture has created a disconnect between people and their food sources, leading to deteriorating health and environmental consequences.
+          Modern agriculture has disconnected us from what we eat. Real food from real farms can transform our health in ways that manufactured solutions cannot.
         </Paragraph>
       </Section>
 
       <Section>
-        <SectionTitle>The Problem</SectionTitle>
-        <List>
-          <ListItem>Industrial farming practices prioritize quantity over quality</ListItem>
-          <ListItem>Processed foods dominate our diets</ListItem>
-          <ListItem>Local farming communities are struggling</ListItem>
-          <ListItem>Consumers lack access to truly healthy food options</ListItem>
-          <ListItem>Environmental degradation from unsustainable practices</ListItem>
-        </List>
+        <SectionTitle>The Challenge</SectionTitle>
+        <Paragraph>
+          Local farmers who grow nutrient-dense food struggle to reach consumers, while most of us struggle to find trustworthy sources of clean, whole foods (<StyledLink href="https://www.plasticlist.org/" target="_blank" rel="noopener noreferrer">for instance</StyledLink>). Large-scale industrial farming prioritizes profits over nutrition, leaving both our health and local farmers at risk.
+        </Paragraph>
       </Section>
 
       <Section>
         <SectionTitle>Our Solution</SectionTitle>
         <Paragraph>
-          At Mendel.farm, we're building a bridge between conscious consumers and ethical farmers. We believe that by supporting local, sustainable agriculture, we can:
+          We make it simple to:
         </Paragraph>
-
-        <SubSection>
-          <SubSectionTitle>Improve Public Health</SubSectionTitle>
-          <List>
-            <ListItem>Access to nutrient-dense, whole foods</ListItem>
-            <ListItem>Reduced exposure to harmful pesticides and additives</ListItem>
-            <ListItem>Better understanding of food sources</ListItem>
-          </List>
-        </SubSection>
-
-        <SubSection>
-          <SubSectionTitle>Support Local Economies</SubSectionTitle>
-          <List>
-            <ListItem>Direct farmer-to-consumer relationships</ListItem>
-            <ListItem>Fair prices for farmers</ListItem>
-            <ListItem>Strengthened local food systems</ListItem>
-          </List>
-        </SubSection>
-
-        <SubSection>
-          <SubSectionTitle>Protect Our Environment</SubSectionTitle>
-          <List>
-            <ListItem>Reduced transportation emissions</ListItem>
-            <ListItem>Sustainable farming practices</ListItem>
-            <ListItem>Improved soil health</ListItem>
-            <ListItem>Enhanced biodiversity</ListItem>
-          </List>
-        </SubSection>
+        <List>
+          <ListItem>Find verified local farms growing clean, nutrient-dense food</ListItem>
+          <ListItem>Know exactly how your food is grown and who grows it</ListItem>
+          <ListItem>Support farmers who prioritize quality over quantity</ListItem>
+          <ListItem>Get fresh, seasonal produce at fair prices</ListItem>
+        </List>
       </Section>
 
       <Section>
-        <SectionTitle>Our Principles</SectionTitle>
+        <SectionTitle>Why It Matters</SectionTitle>
+        <Paragraph>
+          When you buy from local farms:
+        </Paragraph>
         <List>
-          <ListItem><strong>Transparency:</strong> Every farm on our platform is vetted and verified</ListItem>
-          <ListItem><strong>Sustainability:</strong> We prioritize regenerative agricultural practices</ListItem>
-          <ListItem><strong>Community:</strong> We foster direct relationships between farmers and consumers</ListItem>
-          <ListItem><strong>Education:</strong> We empower consumers with knowledge about their food</ListItem>
-          <ListItem><strong>Quality:</strong> We never compromise on the quality of our food</ListItem>
+          <ListItem>You get more nutritious food (freshly harvested food has more nutrients)</ListItem>
+          <ListItem>Farmers earn fair wages to keep growing quality food</ListItem>
+          <ListItem>Your food travels shorter distances, staying fresher and reducing environmental impact</ListItem>
+          <ListItem>You build relationships with the people growing your food</ListItem>
         </List>
+      </Section>
+
+      <Section>
+        <SectionTitle>Our Promise</SectionTitle>
+        <Paragraph>
+          Every farm on our platform is personally vetted to ensure they meet our standards for clean growing practices. We believe in keeping things simple: good farmers growing good food for people who care about their health and community.
+        </Paragraph>
+      </Section>
+
+      <Section>
+        <SectionTitle>Our Vision for the Future</SectionTitle>
+        <Paragraph>
+        Imagine a future where towns and cities are powered by networks of small farms, local food businesses, and engaged communities. Where your food dollars don't disappear into corporate supply chains, but circulate in your community—supporting local farmers, creating jobs, and building resilient local economies. We're not just building a platform—we're helping rebuild local food systems that give power back to communities. When farmers and consumers connect directly, we cut out the middlemen and create something extraordinary: thriving local economies, healthier communities, and food systems that serve people, not profits.
+        </Paragraph>
       </Section>
 
       <Section>
         <SectionTitle>Join the Movement</SectionTitle>
         <Paragraph>
-          Every meal is a vote for the kind of world we want to live in. By choosing local, sustainable farms, you're not just making a purchase—you're making a statement about the future of food.
+          This isn't just another tech platform—it's an open-source movement to rebuild local food systems. Whether you're a farmer, developer, designer, or someone who believes in our vision, there are many ways to contribute:
         </Paragraph>
+        <List>
+          <ListItem>Find Local Farms: Start your journey toward better food and stronger communities</ListItem>
+          <ListItem>Join Development: Our platform is open-source—help us build tools that empower local food systems</ListItem>
+          <ListItem>Spread the Word: Share our mission with farmers and food lovers in your community</ListItem>
+          <ListItem>Share Knowledge: Contribute to our growing database of farming practices and food wisdom</ListItem>
+        </List>
         <Paragraph>
-          Together, we can build a healthier, more sustainable food system for generations to come.
+          We believe that transforming our food system should be a community effort, not a proprietary product. That's why we're building Mendel's Farm in the open, where anyone can contribute to and improve upon our work.
         </Paragraph>
       </Section>
-
-      <ButtonContainer>
-        <ActionButton to="/farms">Find Local Farms Near You →</ActionButton>
-      </ButtonContainer>
-
-      {/* <Quote>
-        "The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings." - Masanobu Fukuoka
-      </Quote> */}
     </ManifestoContainer>
   );
 }
