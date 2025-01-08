@@ -62,7 +62,7 @@ A web application for exploring and discovering sustainable farms and agricultur
    npm start
    ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `http://localhost:9000`
 
 ## Features
 - Browse sustainable farms
