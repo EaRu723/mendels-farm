@@ -130,7 +130,7 @@ function MainContent() {
   return (
     <>
       <HeaderImage />
-      <HeroText opacity={scrollOpacity}>Mendel's Farm</HeroText>
+      <HeroText opacity={scrollOpacity}>Mendel Farm</HeroText>
       <QuoteText opacity={scrollOpacity}>"The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings." - Masanobu Fukuoka</QuoteText>
       <HeroButtonContainer opacity={scrollOpacity}>
         <HeroButton as={Link} to="/farms">Find Local Farms</HeroButton>

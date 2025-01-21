@@ -53,8 +53,7 @@ function Intro() {
     <IntroContainer>
       <Title>Find Real Food from Local Farms</Title>
       <IntroText>
-        We connect you directly with verified local farmers who grow clean, nutrient-dense food. We make it simple to discover, order, and pick up fresh produce and products from sustainable farms near you.
-      </IntroText>
+      We connect you directly with local farms growing clean, nutrient-dense food, making it simple to get fresh produce and products from sustainable farms near you.      </IntroText>
       <ButtonContainer>
         <ActionButton to="/farms">Find Local Farms Near You →</ActionButton>
       </ButtonContainer>
